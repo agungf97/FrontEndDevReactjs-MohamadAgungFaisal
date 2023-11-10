@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { BsStarFill, BsStar } from 'react-icons/bs'
 
-const RestoCard = ({ data }: { data: any }) => {
+const RestoCard = ({ data }) => {
   const { name, photo, cuisine, price_level, is_closed } = data
 
   const open = is_closed ? 'bg-red-400' : 'bg-green-400'
