@@ -1,9 +1,11 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { BsStarFill, BsStar } from 'react-icons/bs'
+import Star from './star'
 
-const RestoCard = ({ data }) => {
-  const { name, photo, cuisine, price_level, is_closed } = data
-
+const CardRestaurant = ({ data }) => {
+  const { name, photo, cuisine, price_level, is_closed, rating, location_id } = data
+  const rate = parseInt(rating)
   const open = is_closed ? 'bg-red-400' : 'bg-green-400'
 
   return (
@@ -11,7 +13,7 @@ const RestoCard = ({ data }) => {
       <div className='h-56 w-full'>
         <Image
           src={photo?.images.original.url}
-          className='h-full rounded-md'
+          className='h-full rounded-md object-cover'
           alt={name}
           title={name}
           width={1280}
@@ -20,13 +22,7 @@ const RestoCard = ({ data }) => {
       </div>
       <div className='my-2 px-4'>
         <h1 className='font-light h-14'>{ name }</h1>
-        <div className='flex items-center space-x-0.5'>
-          <BsStarFill className='w-4 h-4 text-blue-950' />
-          <BsStarFill className='w-4 h-4 text-blue-950' />
-          <BsStarFill className='w-4 h-4 text-blue-950' />
-          <BsStarFill className='w-4 h-4 text-blue-950' />
-          <BsStar className='w-4 h-4 text-blue-950' />
-        </div>
+        <Star rate={rate} page='list' />
         
         <div className='mt-3 flex justify-between items-center'>
           <div className='text-xs text-gray-400 flex items-center space-x-2'>
@@ -40,14 +36,16 @@ const RestoCard = ({ data }) => {
           </div>
         </div>
 
-        <button
-          className='w-full rounded-md bg-blue-950 text-white uppercase px-4 py-2 mt-4'
-        >
-          Learn More
-        </button>
+        <Link href={`/restaurant/${location_id}`}>
+          <button
+            className='w-full rounded-md bg-blue-950 text-white uppercase px-4 py-2 mt-4'
+          >
+            Learn More
+          </button>
+        </Link>
       </div>
     </div>
   )
 }
 
-export default RestoCard
+export default CardRestaurant

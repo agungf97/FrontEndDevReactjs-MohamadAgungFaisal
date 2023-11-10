@@ -8,13 +8,11 @@ export const metadata = {
   description: 'Sekawan Test',
 }
 
-export default function RootLayout({ children, }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={nunito.className}>
-        <div className='container mx-auto w-full lg:w-10/12'>
-          {children}
-        </div>
+        {children}
       </body>
     </html>
   )
