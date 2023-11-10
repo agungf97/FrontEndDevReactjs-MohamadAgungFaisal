@@ -30,10 +30,10 @@ const Home = () => {
   }, [limit])
 
   return (
-    <main className='py-8 px-4'>
+    <main className='md:py-8 py-2 px-8 mx-auto'>
       <h1 className='text-2xl font-extralight'>All Restaurants</h1>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
         {
           data?.filter((item) => item.detail !== '0').map((item, index) => (
             <CardRestaurant key={index} data={item} />
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
       <div className='flex justify-center my-6 w-full'>
         <button
-          className='rounded-md w-80 border border-blue-950 text-blue-950 uppercase px-4 py-2'
+          className='rounded-md md:w-80 w-64 border border-blue-950 text-blue-950 uppercase px-4 py-2'
           onClick={() => handleLoadMore()}
         >
           Load More

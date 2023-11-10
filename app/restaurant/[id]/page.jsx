@@ -1,5 +1,6 @@
-"use client"
+'use client'
 
+import Star from '@/components/star'
 import axios from 'axios'
 import Image from 'next/image'
 import { useParams } from 'next/navigation'
@@ -7,18 +8,17 @@ import { useEffect, useState } from 'react'
 import { AiFillPhone, AiOutlineComment } from 'react-icons/ai'
 import { FaLocationDot } from 'react-icons/fa6'
 import { BiFoodMenu } from 'react-icons/bi'
-import Star from '@/components/star'
 
 const DetailPage = () => {
   const params = useParams()
-  const [data, setData] = useState([])
-  const [reviews, setReviews] = useState([])
+  const [data, setData] = useState<any>([])
+  const [reviews, setReviews] = useState<any>([])
 
   const getRestaurant = async () => {
     await axios.get(`https://travel-advisor.p.rapidapi.com/restaurants/list/?location_id=${params.id}`, {
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': 'fa9961b872msh604419c7e4c4a9bp16df07jsnb1faa2a21f39',
+        'X-RapidAPI-Key': '564acb2c3cmsh08fdd079bc6f745p19e200jsn0ac5a09eba9e',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       },
     })
@@ -31,7 +31,7 @@ const DetailPage = () => {
     await axios.get(`https://travel-advisor.p.rapidapi.com/reviews/list/?location_id=${params.id}&limit=20`, {
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': 'fa9961b872msh604419c7e4c4a9bp16df07jsnb1faa2a21f39',
+        'X-RapidAPI-Key': '564acb2c3cmsh08fdd079bc6f745p19e200jsn0ac5a09eba9e',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       },
     })

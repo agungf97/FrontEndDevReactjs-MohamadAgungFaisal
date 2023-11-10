@@ -1,8 +1,8 @@
 import '@/app/globals.css'
+import Header from '@/components/header'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Nunito } from 'next/font/google'
 import { light } from '@clerk/themes'
-import Navbar from '@/components/Navbar/page'
 
 const nunito = Nunito({ subsets: ['latin'] })
 
@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Sekawan Test',
 }
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, }) {
   return (
     <ClerkProvider
       appearance={{
@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     >
       <html lang="en">
         <body className={nunito.className}>
-          <Navbar />
+          <Header />
           <main className='container mx-auto'>
             <div className='flex items-start justify-center min-h-screen'>
               <div className='mt-20'>{children}</div>

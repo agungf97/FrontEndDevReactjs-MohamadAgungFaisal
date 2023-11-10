@@ -5,9 +5,6 @@ const nextConfig = {
       {
         hostname: 'media-cdn.tripadvisor.com'
       },
-      {
-        hostname: "avatars.githubusercontent.com"
-      }
      ] 
     }
   }
