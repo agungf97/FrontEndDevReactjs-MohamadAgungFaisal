@@ -11,8 +11,8 @@ import { BiFoodMenu } from 'react-icons/bi'
 
 const DetailPage = () => {
   const params = useParams()
-  const [data, setData] = useState<any>([])
-  const [reviews, setReviews] = useState<any>([])
+  const [data, setData] = useState([])
+  const [reviews, setReviews] = useState([])
 
   const getRestaurant = async () => {
     await axios.get(`https://travel-advisor.p.rapidapi.com/restaurants/list/?location_id=${params.id}`, {
@@ -48,7 +48,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className='w-full md:h-[500px] h-[250px] relative'>
+      <div className='w-full md:h-[500px] h-[250px] relative md:mt-20 mt-14'>
         <Image
           src={data[0]?.photo.images.original.url}
           className='w-full h-full object-cover'
