@@ -1,6 +1,6 @@
 "use client"
 
-import CardRestaurant from '@/components/CardResto'
+import CardRestaurant from '@/components/cardResto'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
