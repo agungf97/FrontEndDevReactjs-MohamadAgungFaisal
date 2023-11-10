@@ -4,6 +4,9 @@ const nextConfig = {
      remotePatterns: [
       {
         hostname: 'media-cdn.tripadvisor.com'
+      },
+      {
+        hostname: "avatars.githubusercontent.com"
       }
      ] 
     }

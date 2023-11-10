@@ -1,4 +1,5 @@
 import { HiChevronDown } from 'react-icons/hi'
+import UserActionButton from './userButton'
 
 const Header = () => {
   return (
@@ -29,12 +30,13 @@ const Header = () => {
                 <HiChevronDown className='h-4 w-4' />
               </div>
             </div>
+            <button
+              className='w-24 px-2 py-2 rounded-lg border border-gray-400 text-gray-400 uppercase text-sm'
+            >
+              Clear All
+            </button>
           </div>
-          <button
-            className='w-36 px-4 py-2 rounded-md border border-gray-400 text-gray-400 uppercase text-sm'
-          >
-            Clear All
-          </button>
+          <UserActionButton />
         </div>
       </div>
     </nav>
