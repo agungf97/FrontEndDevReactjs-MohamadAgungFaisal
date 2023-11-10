@@ -12,7 +12,7 @@ const Home = () => {
     await axios.get(`https://travel-advisor.p.rapidapi.com/restaurants/list/?location_id=297705&limit=${limit}&currency=USD`, {
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '564acb2c3cmsh08fdd079bc6f745p19e200jsn0ac5a09eba9e',
+        'X-RapidAPI-Key': 'fa9961b872msh604419c7e4c4a9bp16df07jsnb1faa2a21f39',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       },
     })
