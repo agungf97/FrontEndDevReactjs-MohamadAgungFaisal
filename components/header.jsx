@@ -8,13 +8,13 @@ const Header = () => {
 
       <AuthUser/>
       
-      <div className='container mx-auto w-11/12 md:mt-20 mt-16'>
+      <div className='container mx-auto w-10/12 md:mt-20 mt-16'>
         <h1 className='md:text-4xl text-2xl font-extralight'>Restaurants</h1>
         <span className='block md:mt-4 mt-2 font-extralight w-full lg:w-2/3 xl:w-1/2 md:text-lg text-xs text-justify'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi dolor, cum quas eveniet distinctio. Repellendus earum enim dolore culpa assumenda eveniet esse iure voluptatibus itaque, deserunt odio adipisci doloremque!</span>
       </div>
 
-      <div className='mt-4 py-6 px-4 border-y border-gray-400/50'>
-        <div className='container mx-auto w-full lg:w-11/12 flex justify-between items-center'>
+      <div className='mt-4 py-6 px-8 border-y border-gray-400/50'>
+        <div className='container mx-auto w-full lg:w-10/12 flex justify-between items-center'>
           <div className='flex flex-wrap items-center md:space-x-8 space-x-3'>
             <span className='md:text-lg text-sm'>Filter By :</span>
             <button

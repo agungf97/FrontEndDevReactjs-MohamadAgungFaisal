@@ -11,7 +11,7 @@ export const metadata = {
   description: 'Sekawan Test',
 }
 
-export default function RootLayout({ children, }) {
+export default function RootLayout({ children }) {
   return (
     <ClerkProvider
       appearance={{
@@ -21,11 +21,9 @@ export default function RootLayout({ children, }) {
       <html lang="en">
         <body className={nunito.className}>
           <Header />
-          <main className='container mx-auto'>
-            <div className='flex items-start justify-center min-h-screen'>
-              <div className='mt-20'>{children}</div>
-            </div>
-          </main>
+          <div className='container mx-auto w-full lg:w-10/12'>
+            {children}
+          </div>
         </body>
       </html>
     </ClerkProvider>

@@ -5,7 +5,7 @@ const Navbar = async () => {
   const { userId } = auth();
 
   return (
-    <nav className='fixed top-0 right-0 left-0 z-10 flex items-center justify-between md:px-12 px-4 py-3 bg-slate-100 shadow-lg'>
+    <nav className='fixed top-0 right-0 left-0 z-10 flex items-center justify-between md:px-12 px-5 py-3 bg-slate-100 shadow-lg'>
       <div className='flex items-center'>
         <Link href='/header'>
           <div className='md:text-lg text-sm font-bold uppercase'>
