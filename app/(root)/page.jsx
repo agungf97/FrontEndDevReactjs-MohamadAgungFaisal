@@ -1,6 +1,6 @@
 'use client'
 
-import CardRestaurant from '@/components/card-restaurant'
+import RestoCard from '@/components/RetoCard'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -36,7 +36,7 @@ const Home = () => {
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
         {
           data?.filter((item) => item.detail !== '0').map((item, index) => (
-            <CardRestaurant key={index} data={item} />
+            <RestoCard key={index} data={item} />
           ))
         }
       </div>
