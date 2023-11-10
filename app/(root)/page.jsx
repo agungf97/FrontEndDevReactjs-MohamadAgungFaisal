@@ -1,6 +1,6 @@
 'use client'
 
-import RestoCard from '@/components/RetoCard'
+import RestoCard from '@/components/RestoCard'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
