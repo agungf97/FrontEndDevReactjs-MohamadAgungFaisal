@@ -1,7 +1,6 @@
 import '@/app/globals.css'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Nunito } from 'next/font/google'
-import { dark } from '@clerk/themes'
 import Navbar from '@/components/Navbar/page'
 
 
@@ -14,11 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider
-      appearance={{
-        baseTheme: dark,
-      }}
-    >
+    <ClerkProvider>
       <html lang="en">
         <body className={nunito.className}>
           <Navbar />
