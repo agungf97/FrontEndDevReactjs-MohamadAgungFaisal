@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Star from '@/components/star'
 import axios from 'axios'
@@ -37,7 +37,6 @@ const DetailPage = () => {
     })
       .then((results) => {
         setReviews(results.data.data)
-        console.log('cok', results.data.data)
       })
   }
 
@@ -48,7 +47,7 @@ const DetailPage = () => {
 
   return (
     <div>
-      <div className='w-full md:h-[500px] h-[250px] relative md:mt-20 mt-14'>
+      <div className='w-full md:h-[500px] h-[250px] relative'>
         <Image
           src={data[0]?.photo.images.original.url}
           className='w-full h-full object-cover'

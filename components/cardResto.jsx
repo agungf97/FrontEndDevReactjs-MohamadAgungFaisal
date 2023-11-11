@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsStarFill, BsStar } from 'react-icons/bs'
 import Star from './star'
 
 const CardRestaurant = ({ data }) => {
@@ -9,7 +8,7 @@ const CardRestaurant = ({ data }) => {
   const open = is_closed ? 'bg-red-400' : 'bg-green-400'
 
   return (
-    <div>
+    <div className='shadow-xl'>
       <div className='h-56 w-full'>
         <Image
           src={photo?.images.original.url}
@@ -38,7 +37,7 @@ const CardRestaurant = ({ data }) => {
 
         <Link href={`/restaurant/${location_id}`}>
           <button
-            className='w-full rounded-md bg-blue-950 text-white uppercase px-4 py-2 mt-4'
+            className='w-full rounded-md bg-blue-800 hover:bg-gradient-to-r from-blue-600 to-violet-600 text-white duration-300 uppercase px-4 py-2 mt-4'
           >
             Learn More
           </button>
