@@ -12,7 +12,6 @@ Project ini menggunakan [Next.js](https://nextjs.org/) yang di-bootstrap dengan 
 # Memulai Proyek
 Berikut adalah langkah-langkah untuk memulai proyek ini menggunakan React:
 
-## Prasyarat
 Pastikan Anda memiliki Node.js diinstal di komputer Anda sebelum melanjutkan.
 
 ### Langkah 1: Instalasi
@@ -39,7 +38,7 @@ or
 yarn dev
 ```
 
-### Deploy on Vercel
+# Deploy on Vercel
 
 Cara termudah untuk menerapkan aplikasi Next.js adalah dengan menggunakan [Platform Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app -readme) dari pencipta Next.js.
 
